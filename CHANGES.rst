@@ -4,6 +4,9 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
+- Upgrade pat-leaflet
+  [mpeeters]
+
 - Bugfix: Register upgrade step for the correct profile
   [frapell]
 
