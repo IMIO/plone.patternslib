@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.2.1 (unreleased)
-------------------
+1.2.0.2 (2020-12-21)
+--------------------
 
 - Upgrade pat-leaflet
   [mpeeters]
