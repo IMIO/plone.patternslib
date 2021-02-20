@@ -301,6 +301,10 @@
                     }
                 }.bind(this));
 
+                this.$el.on('leaflet.geosearch', function(e, address) {
+                    geosearch.geosearch(address);
+                });
+
             }
 
             if (options.addmarker) {
