@@ -335,7 +335,7 @@
             if (options.minimap) {
                 var minimap = new L.Control.MiniMap(L.tileLayer.provider(options.default_map_layer.id, options.default_map_layer.options), {toggleDisplay: true, mapOptions: {sleep: false}}).addTo(map);
             }
-
+            this.$el.trigger('leaflet.afterinit');
             log.debug('pattern initialized');
         },
 
