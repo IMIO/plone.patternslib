@@ -15180,6 +15180,10 @@ L.Control.SimpleMarkers = L.Control.extend({
                     }
                 }.bind(this));
 
+                this.$el.on('leaflet.geosearch', function(e, address) {
+                    geosearch.geosearch(address);
+                });
+
             }
 
             if (options.addmarker) {
@@ -15210,7 +15214,7 @@ L.Control.SimpleMarkers = L.Control.extend({
             if (options.minimap) {
                 var minimap = new L.Control.MiniMap(L.tileLayer.provider(options.default_map_layer.id, options.default_map_layer.options), {toggleDisplay: true, mapOptions: {sleep: false}}).addTo(map);
             }
-
+            this.$el.trigger('leaflet.afterinit');
             log.debug('pattern initialized');
         },
 
@@ -15285,5 +15289,5 @@ require(["jquery", "pat-registry", "pat-leaflet"], function($, registry) {
   }
 });
 
-define("/Users/mpeeters/workspace/imio/buildout.library/src/plone.patternslib/src/plone/patternslib/static/bundle-leaflet.js", function(){});
+define("/Users/gotcha/co/buildout.trackyourcircle/src/plone.patternslib/src/plone/patternslib/static/bundle-leaflet.js", function(){});
 
